@@ -34,7 +34,7 @@ class Person{
     public int getAge(){
         return age;
     }
-    
+
 }
 
 // Interface
@@ -296,7 +296,7 @@ public class JavaApplication16 {
         // Medicine
         
         // Medicine object
-        Medicine m = new Medicine();
+        Medicine m = new Medicine(); // Association
         
         // Scanner object for aggregation
         Scanner sc1 = new Scanner(System.in);
@@ -320,7 +320,7 @@ public class JavaApplication16 {
         // Staff
         
         // Staff object
-        Staff s = new Staff();
+        Staff s = new Staff(); // Association
         
         // setting staff details
         s.setName("Shahmir Ahmed");
@@ -332,9 +332,9 @@ public class JavaApplication16 {
         s.printDetails();
         
         // Prescription
-        
+
         // Prescription object
-        Prescription p = new Prescription();
+        Prescription p = new Prescription(); // Association
         
         // Scanner class object for aggregation
         Scanner sc2 = new Scanner(System.in);
