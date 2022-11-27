@@ -67,7 +67,7 @@ class Medicine implements Operations{
     
     @Override
     public void create(){
-        System.out.println("---------------------------");
+        System.out.println("\n---------------------------");
         System.out.println("Creating new medicine: ");
         System.out.println("---------------------------");
         
@@ -85,7 +85,7 @@ class Medicine implements Operations{
     
     @Override
     public void show(){
-        System.out.println("---------------------------");
+        System.out.println("\n---------------------------");
         System.out.println("Medicine Details");
         System.out.println("---------------------------");
         System.out.println("\nMedicine name: "+name);
@@ -101,8 +101,8 @@ class Medicine implements Operations{
     public void update(Scanner s){
         String choice;
         sc1 = s;
-        System.out.println("---------------------------");
-        System.out.println("\nUpdating medicine details: ");
+        System.out.println("\n---------------------------");
+        System.out.println("Updating medicine details: ");
         System.out.println("---------------------------");
         
         System.out.println("\nMedicine to update: ");
@@ -111,8 +111,8 @@ class Medicine implements Operations{
         System.out.println("Medicine dose: "+dose);
         System.out.println("Medicine price: "+price);
         
-        System.out.println("---------------------------");
-        System.out.println("\nChoose an option: ");
+        System.out.println("\n---------------------------");
+        System.out.println("Choose an option: ");
         System.out.println("---------------------------");
         
         System.out.println("\nPress 1 to update name");
@@ -173,8 +173,8 @@ class Staff extends Person{
     }
 
     public void printDetails(){
-        System.out.println("---------------------------");
-        System.out.println("\nStaff Details");
+        System.out.println("\n---------------------------");
+        System.out.println("Staff Details");
         System.out.println("---------------------------");
         System.out.println("\nStaff Name: "+getName());
         System.out.println("Staff Age: "+getAge());
@@ -210,7 +210,7 @@ class Prescription implements Operations{
     public void create(Scanner s){
         sc = s;
         
-        System.out.println("---------------------------");
+        System.out.println("\n---------------------------");
         System.out.println("Creating new prescription: ");
         System.out.println("---------------------------");
         
@@ -219,10 +219,10 @@ class Prescription implements Operations{
         System.out.print("\nEnter patient name: ");
         patient_name = sc.nextLine();
         
-        System.out.print("\nEnter patient gender: ");
+        System.out.print("Enter patient gender: ");
         patient_gender = sc.nextLine();
         
-        System.out.print("\nEnter patient disease: ");
+        System.out.print("Enter patient disease: ");
         disease = sc.nextLine();
     }
     
@@ -231,8 +231,8 @@ class Prescription implements Operations{
         
         String choice;
         
-        System.out.println("---------------------------");
-        System.out.println("\nUpdating Prescription details: ");
+        System.out.println("\n---------------------------");
+        System.out.println("Updating Prescription details: ");
         System.out.println("---------------------------");
         
         System.out.println("\nPrescription to update: ");
@@ -241,7 +241,7 @@ class Prescription implements Operations{
         System.out.println("Patient gender: "+patient_gender);
         System.out.println("Patient Disease: "+disease);
         
-        System.out.println("---------------------------");
+        System.out.println("\n---------------------------");
         System.out.println("Choose one option: ");
         System.out.println("---------------------------");
         
@@ -272,8 +272,8 @@ class Prescription implements Operations{
     
     @Override
     public void show(){
-        System.out.println("---------------------------");
-        System.out.println("\nPrescription Details: ");
+        System.out.println("\n---------------------------");
+        System.out.println("Prescription Details: ");
         System.out.println("---------------------------");
         System.out.println("\nPatient name: "+patient_name);
         System.out.println("Patient Gender: "+patient_gender);
@@ -310,8 +310,8 @@ public class JavaApplication16 {
         // updating medicine
         m.update(sc1);
         
-        System.out.println("---------------------------");
-        System.out.println("\nUpdated Prescription Details: ");
+        System.out.println("\n---------------------------");
+        System.out.println("Updated Prescription Details: ");
         System.out.println("---------------------------");
         
         // displaying medicine details
