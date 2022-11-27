@@ -13,6 +13,7 @@ package javaapplication16;
 import java.util.Scanner;
 
 // Super Class
+// Person Class
 class Person{
     
     protected String name;
@@ -37,13 +38,16 @@ class Person{
 }
 
 // Interface
+// Operations inetrface
 interface Operations{
     public void create();
     public void show();
     public void update();
 }
 
+
 // Abstraction through interface
+// Medicine Class
 class Medicine implements Operations{
     
     private String name;
@@ -126,6 +130,7 @@ class Medicine implements Operations{
 }
 
 // Inheritance
+// Staff Class
 class Staff extends Person{
     private String designation;
     private double salary;
@@ -156,6 +161,7 @@ class Staff extends Person{
     }
 
     public void printDetails(){
+        // printing staff details using getters
         System.out.println("\nStaff Details: ");
         System.out.println("\nStaff Name: "+getName());
         System.out.println("Staff Age: "+getAge());
