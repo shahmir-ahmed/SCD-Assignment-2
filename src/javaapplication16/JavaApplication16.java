@@ -53,16 +53,15 @@ class Medicine implements Operations{
     private String dose;
     private Double price;
     
-    // Composition
-    private Scanner sc = new Scanner(System.in);
+    private Scanner sc;
     
-    // Aggregation
-    private Scanner sc1;
+    private Scanner sc1 = new Scanner(System.in);
     
     Medicine(){
         name = "";
         dose = "";
         price = 0.0;
+        sc = new Scanner(System.in); // Composition
     }
     
     @Override
@@ -95,12 +94,9 @@ class Medicine implements Operations{
     
     @Override
     public void update(){
-        //
-    }
-    
-    public void update(Scanner s){
+        
         String choice;
-        sc1 = s;
+        
         System.out.println("\n---------------------------");
         System.out.println("Updating medicine details: ");
         System.out.println("---------------------------");
@@ -189,26 +185,20 @@ class Prescription implements Operations{
     private String patient_name;
     private String patient_gender;
     private String disease;
-    
-    // Composition
-    private Scanner sc1 = new Scanner(System.in);
-    
-    // Aggregation
+   
     private Scanner sc;
     
-    Prescription(){
+    private Scanner sc1 = new Scanner(System.in);
+    
+    Prescription(Scanner s){
         patient_name = "";
         patient_gender = "";
         disease = "";
+        sc = s; // Aggregation
     }
     
     @Override
     public void create(){
-    
-    }
-
-    public void create(Scanner s){
-        sc = s;
         
         System.out.println("\n---------------------------");
         System.out.println("Creating new prescription: ");
@@ -297,10 +287,7 @@ public class JavaApplication16 {
         
         // Medicine object
         Medicine m = new Medicine(); // Association
-        
-        // Scanner object for aggregation
-        Scanner sc1 = new Scanner(System.in);
-        
+
         // creating new medicine
         m.create();
         
@@ -308,7 +295,7 @@ public class JavaApplication16 {
         m.show();
         
         // updating medicine
-        m.update(sc1);
+        m.update();
         
         System.out.println("\n---------------------------");
         System.out.println("Updated Prescription Details: ");
@@ -332,15 +319,15 @@ public class JavaApplication16 {
         s.printDetails();
         
         // Prescription
-
-        // Prescription object
-        Prescription p = new Prescription(); // Association
         
         // Scanner class object for aggregation
         Scanner sc2 = new Scanner(System.in);
+
+        // Prescription object
+        Prescription p = new Prescription(sc2); // Association
         
         // creating prescription
-        p.create(sc2);
+        p.create();
         
         // displaying specific prescription details
         p.show();
